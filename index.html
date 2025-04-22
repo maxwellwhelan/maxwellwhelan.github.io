@@ -72,6 +72,28 @@
   border: 4px solid var(--accent);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
+      .centered-section {
+  margin: 40px auto;
+  padding: 50px 40px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  text-align: left;
+}
+
+/* Style the icon link */
+.icon-link {
+  margin-left: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+  color: var(--accent);
+}
+
+.icon-link:hover {
+  color: #f97316; /* darker orange on hover */
+}
 
     nav {
       background: var(--accent);
@@ -153,14 +175,23 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <ul>
-      <li><strong>Card Combat Game</strong> – Unity game with turn-based mechanics and AI card duels.</li>
-      <li><strong>Procedural Path Generator</strong> – Pathfinding using Wang Tiles.</li>
-      <li><strong>This Site</strong> – Made with love and GitHub Pages 💙</li>
-    </ul>
-  </section>
+  <section id="portfolio"  class ="centered-/section">
+    <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>Card Combat Game</strong> – Unity game with turn-based mechanics and AI card duels.
+      <a href="https://example.com" target="_blank" class="icon-link">
+        🔗
+      </a>
+    </li>
+    <li>
+      <strong>Procedural Path Generator</strong> – Pathfinding using Wang Tiles.
+    </li>
+    <li>
+      <strong>This Site</strong> – Made with love and GitHub Pages 💙
+    </li>
+  </ul>
+</section>
 
   <section id="resume">
   <h2>Resume</h2>
