@@ -95,6 +95,39 @@
   color: #f97316; /* darker orange on hover */
 }
 
+      .projects-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  max-width: 600px;
+  width: 90%;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: left;
+  z-index: 10;
+}
+
+/* Style the itch.io icon link */
+.itch-icon {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.itch-icon img {
+  width: 20px;
+  height: 20px;
+  filter: grayscale(100%) brightness(0.7);
+  transition: filter 0.3s ease;
+}
+
+.itch-icon:hover img {
+  filter: none;
+}
     nav {
       background: var(--accent);
       text-align: center;
@@ -175,21 +208,16 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="portfolio"  class ="centered-/section">
-    <h2>Projects</h2>
+  <section id="Portfolio" class="projects-box">
+  <h2>Portfolio</h2>
   <ul>
     <li>
       <strong>Card Combat Game</strong> – Unity game with turn-based mechanics and AI card duels.
-      <a href="https://example.com" target="_blank" class="icon-link">
-        🔗
+      <a href="https://yourname.itch.io" target="_blank" class="itch-icon" aria-label="Itch.io Page">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Itchio_logo.svg" alt="itch.io" />
       </a>
     </li>
-    <li>
-      <strong>Procedural Path Generator</strong> – Pathfinding using Wang Tiles.
-    </li>
-    <li>
-      <strong>This Site</strong> – Made with love and GitHub Pages 💙
-    </li>
+    <!-- Add more projects here -->
   </ul>
 </section>
 
