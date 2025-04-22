@@ -1,30 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maxwell Whelan</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
       font-family: sans-serif;
       background-color: #f4f4f4;
-      text-align: center;
+      color: #333;
     }
-    .intro {
+
+    header {
       background-color: #333;
       color: white;
       padding: 40px 20px;
+      text-align: center;
       font-size: 1.5rem;
+    }
+
+    nav {
+      background: #444;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #eee;
+      margin-top: 40px;
+      color: #666;
     }
   </style>
 </head>
 <body>
 
-  <div class="intro">
+  <header>
     Hello, my name is <strong>Maxwell Whelan</strong> and this website contains all the information you'd need to know about me!
-  </div>
+  </header>
+
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Here you'll find a showcase of my work, including games, web apps, and personal experiments.</p>
+    <ul>
+      <li><strong>Card Combat Game</strong> – A Unity game with turn-based mechanics and AI card duels.</li>
+      <li><strong>Procedural Path Generator</strong> – A Unity experiment using Wang Tiles.</li>
+      <li><strong>Portfolio Site</strong> – This very website!</li>
+    </ul>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can view or download my resume <a href="resume.pdf" target="_blank">here</a>.</p>
+    <!-- Make sure to upload "resume.pdf" to your repo -->
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out to me at <a href="mailto:maxwell@example.com">maxwell@example.com</a>.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Maxwell Whelan
+  </footer>
 
 </body>
 </html>
