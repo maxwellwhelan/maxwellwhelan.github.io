@@ -5,29 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Maxwell Whelan</title>
   <style>
-    body {
+    :root {
+      --primary-bg: #1e293b;
+      --secondary-bg: #334155;
+      --accent: #38bdf8;
+      --text: #f1f5f9;
+      --text-light: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     header {
-      background-color: #333;
-      color: white;
       padding: 40px 20px;
+      background-color: var(--secondary-bg);
+    }
+
+    .intro-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .intro-text {
+      flex: 1 1 60%;
+      padding-right: 20px;
+    }
+
+    .intro-text h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+
+    .intro-text p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+
+    .intro-photo {
+      flex: 1 1 35%;
       text-align: center;
-      font-size: 1.5rem;
+    }
+
+    .intro-photo img {
+      max-width: 250px;
+      border-radius: 50%;
+      border: 4px solid var(--accent);
     }
 
     nav {
-      background: #444;
+      background: var(--accent);
       text-align: center;
       padding: 10px 0;
     }
 
     nav a {
-      color: white;
+      color: #0f172a;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
@@ -35,28 +82,49 @@
 
     section {
       padding: 50px 20px;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
     }
 
     h2 {
-      color: #222;
+      color: var(--accent);
       margin-bottom: 20px;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #eee;
+      background-color: var(--secondary-bg);
+      color: var(--text-light);
       margin-top: 40px;
-      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .intro-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .intro-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    Hello, my name is <strong>Maxwell Whelan</strong> and this website contains all the information you'd need to know about me!
+    <div class="intro-container">
+      <div class="intro-text">
+        <h1>Hello, I'm Maxwell Whelan</h1>
+        <p>This website contains all the information you'd need to know about me!</p>
+      </div>
+      <div class="intro-photo">
+        <img src="profile.jpg" alt="Maxwell Whelan">
+        <!-- Upload a photo named profile.jpg or replace the filename -->
+      </div>
+    </div>
   </header>
 
   <nav>
@@ -67,23 +135,21 @@
 
   <section id="projects">
     <h2>Projects</h2>
-    <p>Here you'll find a showcase of my work, including games, web apps, and personal experiments.</p>
     <ul>
-      <li><strong>Card Combat Game</strong> – A Unity game with turn-based mechanics and AI card duels.</li>
-      <li><strong>Procedural Path Generator</strong> – A Unity experiment using Wang Tiles.</li>
-      <li><strong>Portfolio Site</strong> – This very website!</li>
+      <li><strong>Card Combat Game</strong> – Unity game with turn-based mechanics and AI card duels.</li>
+      <li><strong>Procedural Path Generator</strong> – Pathfinding using Wang Tiles.</li>
+      <li><strong>This Site</strong> – Made with love and GitHub Pages 💙</li>
     </ul>
   </section>
 
   <section id="resume">
     <h2>Resume</h2>
-    <p>You can view or download my resume <a href="resume.pdf" target="_blank">here</a>.</p>
-    <!-- Make sure to upload "resume.pdf" to your repo -->
+    <p>View or download my resume <a href="resume.pdf" target="_blank" style="color: var(--accent);">here</a>.</p>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Feel free to reach out to me at <a href="mailto:maxwell@example.com">maxwell@example.com</a>.</p>
+    <p>Email: <a href="mailto:maxwell@example.com" style="color: var(--accent);">maxwell@example.com</a></p>
   </section>
 
   <footer>
