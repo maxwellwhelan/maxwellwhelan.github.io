@@ -148,14 +148,15 @@
 }
 
 .itch-icon img {
-  width: 20px;
-  height: 20px;
-  filter: grayscale(100%) brightness(0.7);
-  transition: filter 0.3s ease;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
 }
 
 .itch-icon:hover img {
-  filter: none;
+  transform: scale(1.1);
 }
     nav {
       background: var(--accent);
